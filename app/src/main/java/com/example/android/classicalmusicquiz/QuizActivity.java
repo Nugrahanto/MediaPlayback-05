@@ -188,7 +188,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         return buttons;
     }
 
-    
+
     private void showNotification(PlaybackStateCompat state) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
 
@@ -391,8 +391,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                     mExoPlayer.getCurrentPosition(), 1f);
         }
         mMediaSession.setPlaybackState(mStateBuilder.build());
-
-        // TODO (2): Call the method to show the notification, passing in the PlayBackStateCompat object.
+        showNotification(mStateBuilder.build());
     }
 
     @Override
